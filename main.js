@@ -2229,8 +2229,10 @@ function CronCreate(Hour, Minute, day) {
     const timezone = adapter.config.timezone || 'Europe/Berlin';
 
     //https://crontab-generator.org/
-    let cronString = '0 ' + Minute + ' ' + Hour + ' * * ';
+    let cronString = Minute + ' ' + Hour + ' * * ';
 
+     adapter.log.debug("day" + day);
+    
     if (day === 0) { //every day
         cronString += '*';
     }
