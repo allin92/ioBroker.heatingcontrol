@@ -2523,7 +2523,7 @@ async function CalculateNextTime() {
 
                     ActiveRomms++;
 
-                    for (var day = 1; day <= 7; day++)
+                    for (var day = 1; day <= 7; day++){
 
                         switch (day) {
                             case 1: sday = "Mon"; break;
@@ -2586,7 +2586,7 @@ async function CalculateNextTime() {
                         }
                     }
                 }
-            }
+            }}
         }
         else {
             adapter.log.warn('CalculateNextTime: not implemented yet, profile type is ' + adapter.config.ProfileType);
